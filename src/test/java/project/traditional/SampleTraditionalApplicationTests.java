@@ -34,7 +34,7 @@ import static org.junit.Assert.assertTrue;
 
 /**
  * Basic integration tests for demo application.
- * 
+ *
  * @author Dave Syer
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,8 +44,8 @@ import static org.junit.Assert.assertTrue;
 @DirtiesContext
 public class SampleTraditionalApplicationTests {
 
-	@Value("${local.server.port}")
-	private int port;
+    @Value("${local.server.port}")
+    private int port;
 
 //	@Test
 //	public void testHomeJsp() throws Exception {
@@ -66,5 +66,9 @@ public class SampleTraditionalApplicationTests {
 //		assertTrue("Wrong body:\n" + body, body.contains("<html>"));
 //		assertTrue("Wrong body:\n" + body, body.contains("<h1>Hello</h1>"));
 //	}
+
+    @Test
+    public void emptyTest() {
+    }
 
 }
