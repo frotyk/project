@@ -12,7 +12,7 @@
 	<packaging>war</packaging>
 	<name>Spring Boot Traditional Sample</name>
 	<description>Spring Boot Traditional Sample</description>
-	<version>1.0.3</version>
+	<version>1.0.3${envClassifier}</version>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>
 		<name>Pivotal Software, Inc.</name>
@@ -74,4 +74,27 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<id>default</id>
+			<properties>
+				<envClassifier></envClassifier>
+			</properties>
+		</profile>
+		<profile>
+			<id>snapshot</id>
+			<properties>
+				<envClassifier>-SNAPSHOT</envClassifier>
+			</properties>
+		</profile>
+		<profile>
+			<id>release</id>
+			<properties>
+				<envClassifier>-RELEASE</envClassifier>
+			</properties>
+		</profile>
+	</profiles>
 </project>
